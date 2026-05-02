@@ -12,7 +12,7 @@ echo "nameserver 1.1.1.1" > /rootubuntu/etc/resolv.conf
 echo "cd
 export ARCH=arm64
 export exportSUBARCH=arm64
-export CROSS_COMPILE=aarch64-linux-android-
+export CROSS_COMPILE=aarch64-linux-androidkernel-
 export CROSS_COMPILE_ARM32=arm-linux-androideabi-
 export LLVM=1
 export PATH=\$PATH:/root/android_prebuilts_build-tools/linux-x86/bin:/root/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9/bin:/root/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9/bin:/root/android-ndk-r27d/toolchains/llvm/prebuilt/linux-x86_64/bin
@@ -33,7 +33,7 @@ make -j$(nproc)
 echo 'cd
 export ARCH=arm64
 export exportSUBARCH=arm64
-export CROSS_COMPILE=aarch64-linux-android-
+export CROSS_COMPILE=aarch64-linux-androidkernel-
 export CROSS_COMPILE_ARM32=arm-linux-androideabi-
 export LLVM=1
 export PATH=\$PATH:/root/android_prebuilts_build-tools/linux-x86/bin:/root/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9/bin:/root/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9/bin:/root/android-ndk-r27d/toolchains/llvm/prebuilt/linux-x86_64/bin' > /root/.bashrc" > /root/ubuntu/root/.bashrc
