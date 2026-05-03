@@ -1,6 +1,7 @@
 wget -c http://cdimage.ubuntu.com/ubuntu-base/releases/focal/release/ubuntu-base-20.04.5-base-amd64.tar.gz
 mkdir -p /root/ubuntu
 tar -zxpf ubuntu-base-20.04.5-base-amd64.tar.gz -C /root/ubuntu
+rm ubuntu-base-20.04.5-base-amd64.tar.gz
 echo "/dev    /root/ubuntu/dev    none    bind,x-systemd.makefs,x-systemd.automount    0    0
 /proc   /root/ubuntu/proc   none    bind,x-systemd.makefs,x-systemd.automount    0    0
 /sys    /root/ubuntu/sys    none    bind,x-systemd.makefs,x-systemd.automount    0    0
@@ -10,7 +11,7 @@ mount -a
 echo "nameserver 1.1.1.1" > /root/ubuntu/etc/resolv.conf
 echo "apt update
 apt upgrade -y
-apt install git wget curl unzip -y
+apt install git wget curl unzip libssl-dev bc -y
 cd
 export ARCH=arm64
 export exportSUBARCH=arm64
