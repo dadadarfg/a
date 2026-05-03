@@ -8,7 +8,10 @@ echo "/dev    /root/ubuntu/dev    none    bind,x-systemd.makefs,x-systemd.automo
 /dev/pts /root/ubuntu/dev/pts none    bind,x-systemd.makefs,x-systemd.automount    0    0" > /etc/fstab
 mount -a
 echo "nameserver 1.1.1.1" > /root/ubuntu/etc/resolv.conf
-echo "cd
+echo "apt update
+apt upgrade -y
+apt install git wget curl -y
+cd
 export ARCH=arm64
 export exportSUBARCH=arm64
 export CROSS_COMPILE=aarch64-linux-androidkernel-
